@@ -16,8 +16,9 @@ def get_document(id):
     return entity
 '''
 
-@mongodb_app.route('/documents/<a>', method='POST')
+@mongodb_app.route('/documents/<a>', method='GET')
 def post_document(a):
+    '''
     entity = request.json
     if not entity:
         abort(400, 'No data received')
@@ -27,5 +28,6 @@ def post_document(a):
         db.docs.insert_one(entity)
     except Exception as ve:
         abort(400, str(ve))
+    '''
 
     return entity
