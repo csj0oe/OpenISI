@@ -36,3 +36,13 @@ else
 	echo "python3 is installed";
 fi
 
+cd $OPENSHIFT_DATA_DIR;
+rm -rf tmp;
+mkdir tmp;
+cd tmp;
+wget https://bootstrap.pypa.io/get-pip.py;
+$OPENSHIFT_DATA_DIR/bin/python3 get-pip.py --user;
+cp $OPENSHIFT_REPO_DIR/install-bottle.py .;
+$OPENSHIFT_DATA_DIR/bin/python3 install-bottle.py;
+cd ..;
+rm -rf tmp;
