@@ -10,7 +10,7 @@ db = client.diy
  
 @mongodb_app.route('/documents', method='PUT')
 def put_document():
-    data = request.json
+    data = request.data
     if not data:
         abort(400, 'No data received')
     entity = json.loads(data)
