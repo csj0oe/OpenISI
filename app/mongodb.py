@@ -21,6 +21,7 @@ def put_document():
      
 @mongodb_app.route('/documents/<id>', method='GET')
 def get_document(id):
+    return "Hi"
     entity = db.docs.find_one({'_id':id})
     print(type(entity))
     print(entity)
