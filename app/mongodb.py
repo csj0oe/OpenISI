@@ -22,6 +22,8 @@ def put_document():
 @mongodb_app.route('/documents/<id>', method='GET')
 def get_document(id):
     entity = db.docs.find_one({'_id':id})
+    print(type(entity))
+    print(entity)
     if not entity:
-        abort(404, 'No document with id %s' % id)
+        abort(404, 'No document found')
     return entity
