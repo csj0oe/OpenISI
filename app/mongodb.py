@@ -17,7 +17,7 @@ def put_document():
         abort(400, 'No _id specified')
     try:
         db.docs.insert_one(entity)
-    except ValidationError as ve:
+    except Exception as ve:
         abort(400, str(ve))
      
 @mongodb_app.route('/documents/:id', method='GET')
