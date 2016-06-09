@@ -17,7 +17,7 @@ def get_document(id):
 '''
 
 @mongodb_app.route('/documents/<a>', method='POST')
-def post_document():
+def post_document(a):
     entity = request.json
     if not entity:
         abort(400, 'No data received')
