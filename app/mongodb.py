@@ -27,3 +27,5 @@ def post_document(a):
         db.docs.insert_one(entity)
     except Exception as ve:
         abort(400, str(ve))
+
+    return entity
