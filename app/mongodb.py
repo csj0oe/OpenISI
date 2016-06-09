@@ -7,13 +7,11 @@ mongodb_app = Bottle()
 client = MongoClient('mongodb://admin:veAcrpgiBLl5@127.6.68.130:27017')
 db = client.diy
 
-
- 
-@mongodb_app.route('/show/<id>')
-def get_document(id):
+@mongodb_app.route('/documents/<doc>', method='GET')
+def get_document(doc):
     return "Hi"
     '''
-    entity = db.docs.find_one({'_id':id})
+    entity = db.docs.find_one({'_id':doc})
     print(type(entity))
     print(entity)
     if not entity:
