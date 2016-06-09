@@ -16,7 +16,7 @@ def put_document():
     data = request.body.readline()
     if not data:
         abort(400, 'No data received')
-    entity = json.loads(reader(data))
+    entity = json.load(reader(data))
     if not entity.has_key('_id'):
         abort(400, 'No _id specified')
     try:
