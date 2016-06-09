@@ -24,3 +24,4 @@ def get_document(id):
     entity = db.docs.find_one({'_id':id})
     if not entity:
         abort(404, 'No document with id %s' % id)
+    return entity
