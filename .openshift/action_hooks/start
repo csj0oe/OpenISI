@@ -1,2 +1,4 @@
 #!/bin/bash
+
+echo $OPENSHIFT_APP_DNS;
 nohup $OPENSHIFT_DATA_DIR/bin/python3 $OPENSHIFT_REPO_DIR/run.py $OPENSHIFT_APP_DNS $OPENSHIFT_DIY_IP $OPENSHIFT_REPO_DIR |& /usr/bin/logshifter -tag diy &
