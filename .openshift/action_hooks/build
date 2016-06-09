@@ -1,5 +1,23 @@
 #!/bin/bash
 
+if ! [ -d $OPENSHIFT_DATA_DIR/local/zlib ]; then
+	rm -f $OPENSHIFT_DATA_DIR/bin/python3;
+	cd $OPENSHIFT_DATA_DIR;
+	rm -rf tmp;
+	mkdir tmp;
+	cd tmp;
+	wget http://zlib.net/zlib-1.2.8.tar.gz;
+	tar -xvzf zlib-1.2.8.tar.gz;
+	mv zlib-1.2.8/* .;
+	rm -rf zlib-1.2.8;
+	./configure --prefix=$OPENSHIFT_DATA_DIR/local/zlib
+	make && make install
+	cd ..;
+	rm -rf tmp;
+else
+	echo "zlib is installed";
+fi
+
 if ! [ -x "$(command -v $OPENSHIFT_DATA_DIR/bin/python3)" ];
 then
 	cd $OPENSHIFT_DATA_DIR;
@@ -10,8 +28,11 @@ then
 	tar -xf Python-3.5.1.tar.xz;
 	mv Python-3.5.1/* .;
 	rm -rf Python-3.5.1;
-	./configure prefix=$OPENSHIFT_DATA_DIR;
-	make install;
+	./configure --prefix=$OPENSHIFT_DATA_DIR --with-zlib-dir=$OPENSHIFT_DATA_DIR/local/zlib/lib;
+	make && make install;
+	cd ..;
+	rm -rf tmp;
 else
 	echo "python3 is installed";
 fi
+
