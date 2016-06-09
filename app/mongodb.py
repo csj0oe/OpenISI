@@ -14,7 +14,10 @@ def put_document():
     if not data:
         abort(400, 'No data received')
 
+    print(type(data))
     print(data)
+    print(type(json.dumps(data)))
+    print(json.dumps(data))
     entity = json.loads(json.dumps(data))
     if not entity.has_key('_id'):
         abort(400, 'No _id specified')
