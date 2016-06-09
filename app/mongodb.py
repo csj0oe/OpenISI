@@ -1,12 +1,12 @@
 import json
 from bottle import Bottle, request, abort
-from pymongo import Connection
+from pymongo import MongoClient
 
 mongodb_app = Bottle()
  
-connection = Connection(mongodb_app.config.get('mongodb_db_host'),
+client = MongoClient(mongodb_app.config.get('mongodb_db_host'),
                         mongodb_app.config.get('mongodb_db_port'))
-db = connection.mydatabase
+db = client.diy
  
 @mongodb_app.route('/documents', method='PUT')
 def put_document():
