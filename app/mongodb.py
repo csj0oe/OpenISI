@@ -7,17 +7,14 @@ mongodb_app = Bottle()
 client = MongoClient('mongodb://admin:veAcrpgiBLl5@127.6.68.130:27017')
 db = client.diy
 
-@mongodb_app.route('/documents/<doc>', method='GET')
-def get_document(doc):
-    return "Hi"
-    '''
-    entity = db.docs.find_one({'_id':doc})
+@mongodb_app.route('/documents/<docid>', method='GET')
+def get_document(docid):
+    entity = db.docs.find_one({'_id':docid})
     print(type(entity))
     print(entity)
     if not entity:
         abort(404, 'No document found')
     return entity
-    '''
 
 @mongodb_app.route('/documents', method='POST')
 def post_document():
