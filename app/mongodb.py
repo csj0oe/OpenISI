@@ -13,7 +13,7 @@ def put_document():
     entity = request.json
     if not entity:
         abort(400, 'No data received')
-    if not entity.has_key('_id'):
+    if '_id' not in entity:
         abort(400, 'No _id specified')
     try:
         db['documents'].save(entity)
