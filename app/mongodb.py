@@ -1,6 +1,9 @@
 import json
+import codecs
 from bottle import Bottle, request, abort
 from pymongo import MongoClient
+
+reader = codecs.getreader("utf-8")
 
 mongodb_app = Bottle()
  
@@ -13,7 +16,7 @@ def put_document():
     data = request.body.readline()
     if not data:
         abort(400, 'No data received')
-    entity = json.loads(data)
+    entity = json.loads(reader(data))
     if not entity.has_key('_id'):
         abort(400, 'No _id specified')
     try:
