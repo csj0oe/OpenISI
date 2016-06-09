@@ -1,4 +1,4 @@
-from .bottle import Bottle, run, static_file, template
+from bottle import Bottle, run, static_file, template
 from .web import web_app
 from .ftp import ftp_app
 
