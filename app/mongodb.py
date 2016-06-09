@@ -19,7 +19,7 @@ def post_document():
     except Exception as ve:
         abort(400, str(ve))
 
-@mongodb_app.route('/documents/<id>', method='POST')
+@mongodb_app.route('/documents/<id>', method='GET')
 def get_document(id):
     entity = db.docs.find_one({'_id':id})
     if not entity:
