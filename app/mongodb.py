@@ -4,8 +4,7 @@ from pymongo import MongoClient
 
 mongodb_app = Bottle()
  
-client = MongoClient(mongodb_app.config.get('mongodb_db_host', '127.6.68.130'),
-                        mongodb_app.config.get('mongodb_db_port', 27017))
+client = MongoClient('mongodb://admin:veAcrpgiBLl5@127.6.68.130:27017')
 db = client.diy
  
 @mongodb_app.route('/documents', method='PUT')
