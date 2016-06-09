@@ -9,7 +9,7 @@ db = client.diy
 
 
  
-@mongodb_app.route('/show/<id>', method='GET')
+@mongodb_app.route('/show/<id>')
 def get_document(id):
     return "Hi"
     '''
