@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo $OPENSHIFT_APP_DNS;
+echo $OPENSHIFT_DIY_IP;
 echo $OPENSHIFT_DIY_PORT;
 echo $OPENSHIFT_REPO_DIR;
 
