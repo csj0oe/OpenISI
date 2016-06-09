@@ -1,5 +1,5 @@
 import json
-from bottle import Bottle, request, abort
+from bottle import Bottle, request, abort, get
 from pymongo import MongoClient
 
 mongodb_app = Bottle()
@@ -16,7 +16,7 @@ def get_document(id):
     return entity
 '''
 
-@mongodb_app.route('/documents/<a>', method='GET')
+@mongodb_app.get('/documents/<a>')
 def post_document(a):
     '''
     entity = request.json
