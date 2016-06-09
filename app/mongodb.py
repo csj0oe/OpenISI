@@ -7,10 +7,6 @@ mongodb_app = Bottle()
 client = MongoClient('mongodb://admin:veAcrpgiBLl5@127.6.68.130:27017')
 db = client.diy
 
-@mongodb_app.route('/docs/<id>', method='GET')
-def site_mongo(id):
-    return id
-
 '''
 @mongodb_app.route('/documents/<id>', method='GET')
 def get_document(id):
@@ -20,8 +16,7 @@ def get_document(id):
     return entity
 '''
 
-'''
-@mongodb_app.route('/documents', method='POST')
+@mongodb_app.route('/documents/<a>', method='POST')
 def post_document():
     entity = request.json
     if not entity:
@@ -32,4 +27,3 @@ def post_document():
         db.docs.insert_one(entity)
     except Exception as ve:
         abort(400, str(ve))
-'''
