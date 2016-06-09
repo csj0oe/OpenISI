@@ -1,4 +1,4 @@
 from app.main import start
 from sys import argv
 
-start(argv[2], argv[3], argv[4])
+start(argv[3], argv[4], argv[5])
