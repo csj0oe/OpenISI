@@ -7,6 +7,10 @@ mongodb_app = Bottle()
 client = MongoClient('mongodb://admin:veAcrpgiBLl5@127.6.68.130:27017')
 db = client.diy
 
+@mongodb_app.route('/a/<filepath:path>', method='GET')
+def site_ftp(filepath):
+    return filepath
+
 @mongodb_app.route('/documents/<docid>', method='GET')
 def get_document(docid):
     entity = db.docs.find_one({'_id':docid})
