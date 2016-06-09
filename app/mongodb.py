@@ -7,7 +7,7 @@ mongodb_app = Bottle()
 client = MongoClient('mongodb://admin:veAcrpgiBLl5@127.6.68.130:27017')
 db = client.diy
  
-@mongodb_app.route('/documents', method='PUT')
+@mongodb_app.route('/documents', method='POST')
 def put_document():
     entity = request.json
     if not entity:
@@ -19,7 +19,7 @@ def put_document():
     except Exception as ve:
         abort(400, str(ve))
      
-@mongodb_app.route('/documents/:id', method='GET')
+@mongodb_app.route('/documents/<id>', method='GET')
 def get_document(id):
     entity = db.docs.find_one({'_id':id})
     if not entity:
