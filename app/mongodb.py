@@ -1,4 +1,5 @@
 import json
+from tornado import escape
 from bottle import Bottle, request, abort
 from pymongo import MongoClient
 
@@ -10,10 +11,10 @@ db = client.diy
  
 @mongodb_app.route('/documents', method='PUT')
 def put_document():
-    data = request.body
+    data = escape.json_decode(request.body)
     if not data:
         abort(400, 'No data received')
-    entity = json.loads(data)
+    entity = json.load(data)
     if not entity.has_key('_id'):
         abort(400, 'No _id specified')
     try:
