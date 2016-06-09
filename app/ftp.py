@@ -1,4 +1,4 @@
-from bottle import Bottle, run, static_file, template
+from bottle import Bottle, static_file
 
 ftp_app = Bottle()
 	
