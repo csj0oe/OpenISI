@@ -2,5 +2,5 @@
 # The logic to start up your application should be put in this
 # script. The application will work only if it binds to
 # $OPENSHIFT_DIY_IP:8080
-command -v python3 >/dev/null 2>&1 || echo "I require python3 but it's not installed.  Aborting." >&2;
+command -v $OPENSHIFT_DATA_DIR/bin/python3 >/dev/null 2>&1 || echo "I require user python3 but it's not installed.  Aborting." >&2;
 nohup $OPENSHIFT_DATA_DIR/bin/python3 $OPENSHIFT_REPO_DIR/run.py $OPENSHIFT_APP_DNS $OPENSHIFT_DIY_IP $OPENSHIFT_REPO_DIR |& /usr/bin/logshifter -tag diy &
