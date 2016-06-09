@@ -1,7 +1,6 @@
 #!/bin/bash
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
-# The logic to stop your application should be put in this script.
 if [ -z "$(ps -ef | grep python3 | grep -v grep)" ]
 then
     client_result "Application is already stopped"

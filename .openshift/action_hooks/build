@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if ! [ -x "$(command -v $OPENSHIFT_DATA_DIR/bin/python3)" ];
+then
+	cd $OPENSHIFT_DATA_DIR;
+	rm -rf tmp;
+	mkdir tmp;
+	cd tmp;
+	wget https://www.python.org/ftp/python/3.5.1/Python-3.5.1.tar.xz;
+	tar -xf Python-3.5.1.tar.xz;
+	mv Python-3.5.1/* .;
+	rm -rf Python-3.5.1;
+	./configure prefix=$OPENSHIFT_DATA_DIR;
+	make install;
+else
+	echo "python3 is installed";
+fi
