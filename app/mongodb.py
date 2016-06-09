@@ -6,6 +6,8 @@ mongodb_app = Bottle()
  
 client = MongoClient(mongodb_app.config.get('mongodb_db_host'),
                         mongodb_app.config.get('mongodb_db_port'))
+print(mongodb_app.config.get('mongodb_db_host'))
+print(mongodb_app.config.get('mongodb_db_port'))
 db = client.diy
  
 @mongodb_app.route('/documents', method='PUT')
