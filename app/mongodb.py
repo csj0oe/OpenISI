@@ -15,14 +15,10 @@ def put_document():
         abort(400, 'No data received')
     if '_id' not in entity:
         abort(400, 'No _id specified')
-
-    return entity
-    '''
     try:
-        db['documents'].save(entity)
+        db.docs.insert_one(entity)
     except ValidationError as ve:
         abort(400, str(ve))
-    '''
      
 @mongodb_app.route('/documents/:id', method='GET')
 def get_document(id):
