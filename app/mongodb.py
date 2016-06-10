@@ -11,9 +11,6 @@ db = client.diy
 
 @mongodb_app.route('/documents', method='POST')
 def post_document():
-    print('Filename: ' + os.path.basename(__file__))
-    print('Action: ' + inspect.stack()[0][3])
-
     entity = request.json
     if not entity:
         abort(400, 'No data received')
@@ -26,8 +23,6 @@ def post_document():
 
 @mongodb_app.route('/documents/<id>', method='GET')
 def get_document(id):
-    print('Filename: ' + os.path.basename(__file__))
-
     entity = db.docs.find_one({'_id':id})
     if not entity:
         abort(404, 'No document found')
