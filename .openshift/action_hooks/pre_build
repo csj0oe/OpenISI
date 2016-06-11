@@ -1,6 +1,8 @@
 #!/bin/bash
 
+# If python3 command doesn't exist
 if ! [ -x "$(command -v python3)" ]; then
+	# If user built python3 command doesn't exist
 	if ! [ -x "$(command -v $OPENSHIFT_DATA_DIR/bin/python3)" ]; then
 		cd $OPENSHIFT_DATA_DIR;
 		rm -rf tmp;
@@ -15,5 +17,14 @@ if ! [ -x "$(command -v python3)" ]; then
 		cd ..;
 		rm -rf tmp;
 	fi
-	export PATH=$OPENSHIFT_DATA_DIR/bin:$PATH
+
+	# Create .bash_profile if not exist
+	if ! [ -f "$OPENSHIFT_DATA_DIR/.bash_profile" ]; then
+		touch $OPENSHIFT_DATA_DIR/.bash_profile;
+	fi
+
+	# Add export statement in .bash_profile if not exist
+	if ! grep -Fxq "export PATH=\$OPENSHIFT_DATA_DIR/bin:\$PATH" $OPENSHIFT_DATA_DIR/.bash_profile; then
+		echo "\nexport PATH=\$OPENSHIFT_DATA_DIR/bin:\$PATH" >> $OPENSHIFT_DATA_DIR/.bash_profile;
+	fi
 fi
