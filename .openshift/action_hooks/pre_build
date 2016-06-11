@@ -25,6 +25,6 @@ if ! [ -x "$(command -v python3)" ]; then
 
 	# Add export statement in .bash_profile if not exist
 	if ! grep -Fxq "export PATH=\$OPENSHIFT_DATA_DIR/bin:\$PATH" $OPENSHIFT_DATA_DIR/.bash_profile; then
-		echo "\nexport PATH=\$OPENSHIFT_DATA_DIR/bin:\$PATH" >> $OPENSHIFT_DATA_DIR/.bash_profile;
+		echo -e "\nexport PATH=\$OPENSHIFT_DATA_DIR/bin:\$PATH" >> $OPENSHIFT_DATA_DIR/.bash_profile;
 	fi
 fi
