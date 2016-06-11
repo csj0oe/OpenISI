@@ -1,6 +1,6 @@
 import os
 from sys import argv
-import ConfigParser
+import configparser
 
 # Define repo dir
 repo_dir = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../'))
@@ -12,7 +12,7 @@ mongodb_host = argv[3] if len(argv) > 3 else 'localhost'
 mongodb_port = argv[4] if len(argv) > 4 else '27017'
 
 # Load config.ini config vars
-config = ConfigParser.ConfigParser()
+config = configparser.ConfigParser()
 config.read(repo_dir+'/config.ini')
 
 mongodb_user = config.get('mongodb', 'user')
