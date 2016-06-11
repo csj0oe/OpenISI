@@ -19,7 +19,7 @@ application.config['mongodb_host'] = argv[3] if len(argv) > 3 else 'localhost'
 application.config['mongodb_port'] = argv[4] if len(argv) > 4 else 27017
 
 if __name__ == '__main__':
-    httpd = make_server('127.6.68.129', 8080, application)
+    httpd = make_server(host, port, application)
     # Wait for a single request, serve it and quit.
     #httpd.handle_request()
     httpd.serve_forever()
