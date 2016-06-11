@@ -27,4 +27,7 @@ if ! [ -x "$(command -v python3)" ]; then
 	if ! grep -Fxq "^export PATH=\$OPENSHIFT_DATA_DIR/bin:\$PATH$" $OPENSHIFT_DATA_DIR/.bashrc; then
 		echo "export PATH=\$OPENSHIFT_DATA_DIR/bin:\$PATH" >> $OPENSHIFT_DATA_DIR/.bashrc;
 	fi
+
+	# Load .bashrc in current shell
+	source $OPENSHIFT_DATA_DIR/.bashrc;
 fi
