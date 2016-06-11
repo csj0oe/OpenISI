@@ -4,6 +4,8 @@ import json
 from bottle import Bottle, request, abort
 from pymongo import MongoClient
 
+from .config import *
+
 mongodb_app = Bottle()
  
 con_str = 'mongodb://'+mongodb_user+':'+mongodb_pwd+'@'+mongodb_host+':'+mongodb_port
