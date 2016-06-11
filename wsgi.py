@@ -8,6 +8,8 @@ from app.main import site_app as application
 
 # Define server host
 host = argv[1] if len(argv) > 1 else 'localhost'
+print(type(host))
+print(host)
 
 # Define server port
 port = argv[2] if len(argv) > 2 else 8080
