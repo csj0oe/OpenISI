@@ -1,3 +1,5 @@
 #!/bin/bash
 
+source $OPENSHIFT_DATA_DIR/.bashrc;
+
 pip3 install -r $OPENSHIFT_REPO_DIR/requirements.txt

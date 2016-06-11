@@ -1,3 +1,5 @@
 #!/bin/bash
 
+source $OPENSHIFT_DATA_DIR/.bashrc;
+
 nohup python3 $OPENSHIFT_REPO_DIR/run.py $OPENSHIFT_DIY_IP $OPENSHIFT_DIY_PORT $OPENSHIFT_MONGODB_DB_HOST $OPENSHIFT_MONGODB_DB_PORT|& /usr/bin/logshifter -tag diy &
