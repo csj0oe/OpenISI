@@ -1,0 +1,95 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="web/bootstrap.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="web/index.html" class="navbar-brand">ISI</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</diV>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="web/index.html">Accueil</a></li>
+					<li><a href="web/actu.html">Actualites</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">A propos<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Cours</a></li>
+							<li class="active"><a href="web/ens.html">Enseignants</a></li>
+							<li><a href="#">Emplois</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Formations</a></li>
+							<li><a href="#">Clubs</a></li>
+							<li><a href="#">Documents</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<img src="web/ens.jpg" class="img-responsive">
+	</nav>
+	<center>
+		<div class="input-group col-sm-11 col-xs-11 col-md-11 col-lg-11">
+			<input id="filter" type="text" class="form-control" placeholder="Recherche..">
+		</div>
+	</center>
+	<div class="container-fluid">
+		<div class="table-responsive">
+			<table class="table table-hover">
+			    <thead>
+			        <tr>
+			            <th>Nom et Prenom</th>
+			            <th>Adresse Mail</th>
+			            <th>Departement</th>
+			            <th>Emploi</th>
+			        </tr>
+			    </thead>
+			    <tbody class="searchable">
+			        <tr>
+			            <td>Tarek</td>
+			            <td>ahla w sahla</td>
+			            <td>bo5l</td>
+			            <td>battal</td>
+			        </tr>
+			        <tr>
+			            <td>ZEUS</td>
+			            <td>r3ad@gmail.com</td>
+			            <td>olympus</td>
+			            <td>olympus</td>
+			        </tr>
+			        <tr>
+			            <td>azerty</td>
+			            <td>azerty</td>
+			            <td>azerty</td>
+			            <td>azerty</td>
+			        </tr>
+			    </tbody>
+			</table>
+		</div>
+	</div>
+	<script src="web/jquery-1.12.0.min.js"></script>
+	<script src="web/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function () {
+		    (function ($) {
+		        $('#filter').keyup(function () {
+		            var rex = new RegExp($(this).val(), 'i');
+		            $('.searchable tr').hide();
+		            $('.searchable tr').filter(function () {
+		                return rex.test($(this).text());
+		            }).show();
+		        })
+		    }(jQuery));
+		});
+	</script>
+</body>
+</html>
