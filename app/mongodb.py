@@ -6,7 +6,8 @@ from pymongo import MongoClient
 
 mongodb_app = Bottle()
  
-client = MongoClient('mongodb://admin:veAcrpgiBLl5@127.6.68.130:27017')
+con_str = 'mongodb://'+mongodb_user+':'+mongodb_pwd+'@'+mongodb_host+':'+mongodb_port
+client = MongoClient(con_str)
 db = client.diy
 
 @mongodb_app.route('/documents', method='POST')
