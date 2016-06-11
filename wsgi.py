@@ -25,7 +25,7 @@ mongodb_user = argv[5] if len(argv) > 5 else 'user'
 mongodb_pwd = argv[6] if len(argv) > 6 else 'password'
 
 if __name__ == '__main__':
-	from app.main import site_app as application
+    from app.main import site_app as application
     httpd = make_server(host, port, application)
     # Wait for a single request, serve it and quit.
     #httpd.handle_request()
