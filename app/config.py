@@ -1,5 +1,4 @@
 import os
-<<<<<<< HEAD
 from sys import argv
 import configparser
 
@@ -18,7 +17,3 @@ config.read(repo_dir+'/config.ini')
 
 mongodb_user = config.get('mongodb', 'user')
 mongodb_pwd = config.get('mongodb', 'password')
-=======
-
-repo_dir = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../'))
->>>>>>> github/master
