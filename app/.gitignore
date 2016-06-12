@@ -87,9 +87,3 @@ ENV/
 
 # Rope project settings
 .ropeproject
-<<<<<<< HEAD
-
-# INI Configuration files
-.ini
-=======
->>>>>>> github/master

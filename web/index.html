@@ -1,0 +1,138 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link href="calendar.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">ISI</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</diV>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="#">Accueil</a></li>
+					<li><a href="#">Actualites</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">A propos<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Cours</a></li>
+							<li><a href="#">Enseignants</a></li>
+							<li><a href="#">Emplois</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Formations</a></li>
+							<li><a href="#">Clubs</a></li>
+							<li><a href="#">Documents</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	  		<ol class="carousel-indicators">
+	    		<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    		<li data-target="#myCarousel" data-slide-to="1"></li>
+	    		<li data-target="#myCarousel" data-slide-to="2"></li>
+	    		<li data-target="#myCarousel" data-slide-to="3"></li>
+	  		</ol>
+
+	  		<div class="carousel-inner" role="listbox">
+	    		<div class="item active">
+	      			<img class="img-responsive" src="image1.jpg">
+	    		</div>
+
+	    		<div class="item">
+	      			<img class="img-responsive" src="image2.jpg">
+	    		</div>
+
+	    		<div class="item">
+	      			<img class="img-responsive" src="image3.jpg">
+	    		</div>
+
+	    		<div class="item">
+	      			<img class="img-responsive" src="image4.jpg">
+	    		</div>
+	  		</div>
+
+	  		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+	  		</a>
+	 		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+	  		</a>
+		</div>
+	</nav>
+	<div class="well">Actualites</div>
+	<div class="row container">
+	    <div class="col-md-3">
+	      <a href="#" class="thumbnail">
+	        <p>ahla w sahla</p>    
+	        <img src="image1.jpg">
+	      </a>
+	    </div>
+	    <div class="col-md-3">
+	      <a href="#" class="thumbnail">
+	        <p>ahla w sahla</p>    
+	        <img src="image2.jpg">
+	      </a>
+	    </div>
+	    <div class="col-md-3">
+	      <a href="#" class="thumbnail">
+	        <p>ahla w sahla</p>    
+	        <img src="image3.jpg">
+	      </a>
+	    </div>
+	    <div class="col-md-3">
+	      <a href="#" class="thumbnail">
+	        <p>ahla w sahla</p>    
+	        <img src="image4.jpg">
+	      </a>
+	    </div>
+	</div>
+	<div class="well">Calendrier</div>
+	<div class="container">
+    	<div class="responsive-calendar">
+        	<div class="controls">
+            	<a class="pull-left" data-go="prev"><div class="btn btn-primary">Prev</div></a>
+            	<h4><span data-head-year></span> <span data-head-month></span></h4>
+            	<a class="pull-right" data-go="next"><div class="btn btn-primary">Next</div></a>
+        	</div><hr/>
+        	<div class="day-headers">
+	          <div class="day header">Mon</div>
+	          <div class="day header">Tue</div>
+	          <div class="day header">Wed</div>
+	          <div class="day header">Thu</div>
+	          <div class="day header">Fri</div>
+	          <div class="day header">Sat</div>
+	          <div class="day header">Sun</div>
+        	</div>
+        	<div class="days" data-group="days">
+        	</div>
+    	</div>
+    </div>
+    <nav class="navbar navbar-default navbar-bottom">
+    	<p class="text-muted" style="margin-top:15px;">Adresse de la fac</p>
+	</nav>
+	<script src="jquery-1.12.0.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="calendar.js"></script>
+    <script type="text/javascript">
+      	$(document).ready(function () {
+	        $(".responsive-calendar").responsiveCalendar({
+	          time: '2016-06',
+	          events: {
+	            "2016-06-30": {"number": 5, "url": ""},
+	            "2016-06-26": {"number": 1, "url": ""}, 
+	            "2016-06-03":{"number": 1}, 
+	            "2016-06-12": {}}
+	        });
+      	});
+    </script>
+</body>
+</html>
