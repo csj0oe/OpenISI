@@ -8,7 +8,7 @@ web_app = Bottle()
 	
 @web_app.route('/', method='GET')
 def redirect_web():
-	return redirect('/web', code=301)
+	return redirect('/web/', code=301)
 
 @web_app.route('/web', method='GET')
 @web_app.route('/web/', method='GET')
