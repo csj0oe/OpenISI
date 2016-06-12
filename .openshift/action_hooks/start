@@ -1,6 +1,8 @@
 #!/bin/bash
 
-source $OPENSHIFT_DATA_DIR/.bashrc;
+if [ -f $OPENSHIFT_DATA_DIR/.bashrc ]; then
+	source $OPENSHIFT_DATA_DIR/.bashrc;
+fi
 
 if [ $OPENSHIFT_APP_NAME = "diy" ]; then
 	HOST=$OPENSHIFT_DIY_IP
