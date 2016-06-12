@@ -9,7 +9,6 @@ from .config import *
 mongodb_app = Bottle()
  
 con_str = 'mongodb://'+mongodb_user+':'+mongodb_pwd+'@'+mongodb_host+':'+mongodb_port
-print(con_str)
 client = MongoClient(con_str)
 db = client.diy
 
