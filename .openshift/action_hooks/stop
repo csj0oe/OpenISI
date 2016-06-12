@@ -1,9 +1,15 @@
 #!/bin/bash
 source $OPENSHIFT_CARTRIDGE_SDK_BASH
 
-if [ -z "$(ps -ef | grep python3 | grep -v grep)" ]
+if [ $OPENSHIFT_APP_NAME = "diy" ]; then
+	COMMAND="python3"
+else
+	COMMAND="httpd"
+fi
+
+if [ -z "$(ps -ef | grep "$(COMMAND)" | grep -v grep)" ]
 then
     client_result "Application is already stopped"
 else
-    kill `ps -ef | grep python3 | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+    kill `ps -ef | grep "$(COMMAND)" | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
 fi
