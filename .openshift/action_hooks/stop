@@ -7,9 +7,9 @@ else
 	CMD="httpd"
 fi
 
-if [ -z "$(ps -ef | grep "$(CMD)" | grep -v grep)" ]
+if [ -z "$(ps -ef | grep $(CMD) | grep -v grep)" ]
 then
     client_result "Application is already stopped"
 else
-    kill `ps -ef | grep "$(CMD)" | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
+    kill `ps -ef | grep $(CMD) | grep -v grep | awk '{ print $2 }'` > /dev/null 2>&1
 fi
