@@ -1,0 +1,133 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="site.html" class="navbar-brand">ISI</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</diV>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="site.html">Accueil</a></li>
+					<li><a href="actu.html">Actualites</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">A propos<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li class="active"><a href="cours.html">Cours</a></li>
+							<li><a href="ens.html">Enseignants</a></li>
+							<li><a href="emp.html">Emplois</a></li>
+							<li class="divider"></li>
+							<li><a href="form.html">Formations</a></li>
+							<li><a href="club.html">Clubs</a></li>
+							<li><a href="#">Documents</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<img src="cours.jpg" class="img-responsive">
+	</nav>
+	<ul class="nav nav-tabs">
+		<li class="dropdown">
+    		<a class="dropdown-toggle" data-toggle="dropdown">SIL
+    		<span class="caret"></span></a>
+    		<ul class="dropdown-menu">
+     			<li><a href="#menu1" data-toggle="tab">1 SIL</a></li>
+      			<li><a href="#menu2" data-toggle="tab">2 SIL</a></li>
+      			<li><a href="#menu3" data-toggle="tab">3 SIL</a></li>
+    		</ul>
+		</li>
+	</ul>
+
+	<div class="tab-content">
+  		<div id="menu1" class="tab-pane fade">
+    		<center><h3> 1 SIL</h3></center>
+    		<p>Some content.</p>
+ 		</div>
+		<div id="menu2" class="tab-pane fade">
+	    	<center><h3> 2 SIL</h3></center>
+	    	<div class="container">
+	    		<table class="table table-hover">
+	    			<thead>
+	    				<th>Matiere</th>
+	    				<th>Coefficient</th>
+	    				<th>cours</th>
+	    				<th>Telechargement</th>
+	    			</thead>
+	    			<tbody>
+	    				<tr>
+	    					<td>POO 2</td>
+	    					<td>1.5</td>
+	    					<td><a data-toggle="modal" data-target="#myModal1">Voir cours</a></td>
+	    						<div class="modal fade" id="myModal1" role="dialog">
+					    			<div class="modal-dialog">
+						      			<div class="modal-content">
+						        			<div class="modal-header">
+						          				<center><h4 class="modal-title">POO 2</h4></center>
+						          				<button type="button" class="close" data-dismiss="modal">&times;</button>
+						        			</div>
+						        			<div class="modal-body">
+						        				
+						        				<div class="col-md-4 col-sm-6 col-xs-12">
+							        				<a class="thumbnail">  
+							        					<img src="image1.jpg">
+							        					<div class="carousel-caption">
+						  									<h2>chap 1</h2>
+														</div>
+							      					</a>
+						      					</div>
+						      					<div class="col-md-4 col-sm-6 col-xs-12">
+							      					<a class="thumbnail">  
+							        					<img src="image1.jpg">
+							        					<div class="carousel-caption">
+						  									<h2>TD</h2>
+														</div>
+							      					</a>
+						      					</div>
+						      					<div class="col-md-4 col-sm-6 col-xs-12">
+							      					<a class="thumbnail">  
+							        					<img src="image1.jpg">
+							        					<div class="carousel-caption">
+						  									<h2>EXAM</h2>
+														</div>
+							      					</a>
+						      					</div>
+						      					<div class="col-md-4 col-sm-6 col-xs-12">
+							      					<a class="thumbnail">  
+							        					<img src="image1.jpg">
+							        					<div class="carousel-caption">
+						  									<h2>DS</h2>
+														</div>
+							      					</a>
+						      					</div>
+						      					
+						        			</div>
+						        			<div class="modal-footer">
+						        			</div>
+						      			</div>
+					      			</div>
+  								</div>
+	    					<td><a href="#">Telecharger</a></td>
+	    				</tr>
+	    			</tbody>
+	    		</table>
+	    	</div>
+  		</div>
+  		<div id="menu3" class="tab-pane fade">
+	    	<center><h3> 3 SIL</h3></center>
+  		</div>
+	</div>
+	<script src="jquery-1.12.0.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+</body>
+</html>
