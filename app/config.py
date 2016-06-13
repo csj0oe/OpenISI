@@ -1,6 +1,4 @@
 import os
-from sys import argv
-import configparser
 
 # Define repo dir
 repo_dir = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../'))
