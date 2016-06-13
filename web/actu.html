@@ -1,0 +1,84 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="act.css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="site.html" class="navbar-brand">ISI</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</diV>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li ><a href="site.html">Accueil</a></li>
+					<li class="active"><a href="actu.html">Actualites</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">A propos<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Cours</a></li>
+							<li><a href="ens.html">Enseignants</a></li>
+							<li><a href="#">Emplois</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Formations</a></li>
+							<li><a href="#">Clubs</a></li>
+							<li><a href="#">Documents</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<img src="act.jpg" class="img-responsive">
+	</nav>
+	<div class="container">
+    	<div id="products" class="row list-group">
+        	<div class="item list-group-item  col-xs-4 col-lg-4">
+            	<div class="thumbnail">
+	                <img class="group list-group-image img-responsive" data-toggle="modal" data-target="#myModal" src="image3.jpg" />
+	                <div class="caption">
+	                    <h4 class="group inner list-group-item-heading">
+	                        Karhabt el moudir</h4>
+	                    <p class="group inner list-group-item-text">
+	                        Ghalya barcha el karhba</p>
+                    	<div class="row">
+                        	<div class="col-xs-12 col-md-6">
+	                            <p class="lead">210.000 DT</p>
+                        	</div>
+                        	<div class="col-xs-12 col-md-6">
+                            	<center><a class="btn btn-success" data-toggle="modal" data-target="#myModal">afficher</a></center>
+                        	</div>
+                    	</div>
+                	</div>
+            	</div>
+            	<div class="modal fade" id="myModal" role="dialog">
+	    			<div class="modal-dialog">
+		      			<div class="modal-content">
+		        			<div class="modal-header">
+		          				<h4 class="modal-title">El moudir chre karhba jdida</h4>
+		        			</div>
+		        			<div class="modal-body">
+		        				<img class="img-responsive" src="image3.jpg">
+		          				<center><p>malla lamborghini</p></center>
+		        			</div>
+		        			<div class="modal-footer">
+		          				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        			</div>
+		      			</div>
+	      			</div>
+  				</div>
+        	</div>
+		</div>
+	</div>
+	
+	<script src="jquery-1.12.0.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+</body>
+</html>
