@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="site.html" class="navbar-brand">ISI</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</diV>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="site.html">Accueil</a></li>
+					<li><a href="actu.html">Actualites</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">A propos<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="cours.html">Cours</a></li>
+							<li><a href="ens.html">Enseignants</a></li>
+							<li class="active"><a href="emp.html">Emplois</a></li>
+							<li class="divider"></li>
+							<li><a href="form.html">Formations</a></li>
+							<li><a href="club.html">Clubs</a></li>
+							<li><a href="#">Documents</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<img src="emp.jpg" class="img-responsive">
+	</nav>
+	<div class="panel-group" id="accordion">
+	  	<div class="panel panel-default">
+		    <div class="panel-heading">
+		    	<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+			    	<h4 class="panel-title">
+				        <center><div style="color:black">1ere annee licence</div></center>
+			        </h4>
+	        	</a>
+		    </div>
+		    <div id="collapse1" class="panel-collapse collapse">
+			      <div class="panel-body">
+			      		<div class="row container">
+						    <div class="col-md-3 col-sm-6">
+						      <a class="thumbnail" data-toggle="modal" data-target="#myModal1">  
+						        <img src="image1.jpg">
+						        <div class="carousel-caption">
+					  				<h2>1 ARS 01</h2>
+								</div>
+						      </a>
+						      <div class="modal fade" id="myModal1" role="dialog">
+					    			<div class="modal-dialog">
+						      			<div class="modal-content">
+						        			<div class="modal-header">
+						          				<center><h4 class="modal-title">1 ARS 01</h4></center>
+						        			</div>
+						        			<div class="modal-body">
+						        				<img class="img-responsive" src="image1.jpg">
+						        				<center><a>Telecharger</a></center>
+						        			</div>
+						        			<div class="modal-footer">
+						          				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						        			</div>
+						      			</div>
+					      			</div>
+  								</div>
+						    </div>
+						    <div class="col-md-3 col-sm-6">
+						      <a href="#" class="thumbnail" data-toggle="modal" data-target="#myModal2">    
+						        <img src="image2.jpg">
+						        <div class="carousel-caption">
+					  				<h2>1 SIL 2</h2>
+								</div>
+						      </a>
+						      <div class="modal fade" id="myModal2" role="dialog">
+					    			<div class="modal-dialog">
+						      			<div class="modal-content">
+						        			<div class="modal-header">
+						          				<center><h4 class="modal-title">1 SIL 2</h4></center>
+						        			</div>
+						        			<div class="modal-body">
+						        				<img class="img-responsive" src="image2.jpg">
+						        				<center><a>Telecharger</a></center>
+						        			</div>
+						        			<div class="modal-footer">
+						          				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						        			</div>
+						      			</div>
+					      			</div>
+  								</div>
+						    </div>
+					    </div>
+			      </div>
+		    </div>
+	  	</div>
+	  	<div class="panel panel-default">
+		    <div class="panel-heading">
+		      <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+			    	<h4 class="panel-title">
+				        <center><div style="color:black">2eme annee licence</div></center>
+			        </h4>
+	        	</a>
+	    	</div>
+		    <div id="collapse2" class="panel-collapse collapse">
+		      <div class="panel-body"></div>
+		    </div>
+	  	</div>
+	  	<div class="panel panel-default">
+		    <div class="panel-heading">
+		       <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+			    	<h4 class="panel-title">
+				        <center><div style="color:black">3eme annee licence</div></center>
+			        </h4>
+	        	</a>
+		    </div>
+		    <div id="collapse3" class="panel-collapse collapse">
+		      <div class="panel-body"></div>
+		    </div>
+		</div>
+	</div> 
+	<script src="jquery-1.12.0.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+</body>
+</html>

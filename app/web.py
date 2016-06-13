@@ -10,5 +10,5 @@ def redirect_web():
 @web_app.route('/web', method='GET')
 @web_app.route('/web/', method='GET')
 @web_app.route('/web/<filepath:path>', method='GET')
-def site_web(filepath = 'site.html'):
+def site_web(filepath = 'index.html'):
     return static_file(filepath, root=repo_dir+'/web')
