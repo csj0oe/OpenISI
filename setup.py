@@ -6,5 +6,5 @@ setup(name='OpenISI',
       author='Ta Re K',
       author_email='csj0oe@gmail.com',
       url='openisi-joedev.rhcloud.com',
-      install_requires=['bottle'],
+      install_requires=['bottle','pymongo'],
      )
