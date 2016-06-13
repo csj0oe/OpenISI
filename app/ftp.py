@@ -1,7 +1,4 @@
-import os
-
 from bottle import Bottle, static_file
-
 from .config import repo_dir
 
 ftp_app = Bottle()

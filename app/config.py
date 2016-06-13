@@ -1,23 +1,7 @@
 import os
-from sys import argv
-import configparser
 
-# Define repo dir
+# current dir
 repo_dir = os.path.realpath(os.path.join(os.path.dirname(os.path.realpath(__file__)),'../'))
 
-# Vars from command line argv
-host = argv[1] if len(argv) > 1 else 'localhost'
-port = int(argv[2]) if len(argv) > 2 else 8080
-mongodb_host = argv[3] if len(argv) > 3 else 'localhost'
-mongodb_port = argv[4] if len(argv) > 4 else '27017'
-
-if len(argv) > 6:
-	mongodb_user = argv[5]
-	mongodb_pwd = argv[6]
-else:
-	# Load config.ini config vars
-	config = configparser.ConfigParser()
-	config.read(repo_dir+'/config.ini')
-
-	mongodb_user = config.get('mongodb', 'user')
-	mongodb_pwd = config.get('mongodb', 'password')
+# mongodb URL
+mongodb_string = os.environ.get('OPENSHIFT_MONGODB_DB_URL','mongodb://admin:12345@localhost:27017/db')

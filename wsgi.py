@@ -1,12 +1,18 @@
 #!/usr/bin/env python
 
-from wsgiref.simple_server import make_server
+#import os
+#import sys
+#sys.path.append(os.environ.get('OPENSHIFT_REPO_DIR','.'))
+#virtenv = os.path.join(os.environ.get('OPENSHIFT_PYTHON_DIR','.'), 'virtenv')
 
-from app.config import *
 from app.main import site_app as application
 
+#
+# Below for testing only
+#
 if __name__ == '__main__':
-    httpd = make_server(host, port, application)
+    from wsgiref.simple_server import make_server
+    httpd = make_server('localhost', 8080, application)
     # Wait for a single request, serve it and quit.
     #httpd.handle_request()
     httpd.serve_forever()
