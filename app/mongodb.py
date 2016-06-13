@@ -1,16 +1,14 @@
-import os
-import json
-
 from bottle import Bottle, request, abort
 from pymongo import MongoClient
-
-from .config import *
+from .config import mongodb_string
 
 mongodb_app = Bottle()
  
-con_str = 'mongodb://'+mongodb_user+':'+mongodb_pwd+'@'+mongodb_host+':'+mongodb_port
-client = MongoClient(con_str)
-db = client.diy
+client = MongoClient(mongodb_string)
+#db = client.get_default_database() - Needs PyMongo > 2.6 , Currently we use 2.5
+# begin solution
+db = client['openisi']
+# end solution
 
 @mongodb_app.route('/documents', method='POST')
 def post_document():
@@ -20,7 +18,7 @@ def post_document():
     if '_id' not in entity:
         abort(400, 'No _id specified')
     try:
-        db.docs.insert_one(entity)
+        db.docs.insert(entity)
     except Exception as ve:
         abort(400, str(ve))
 
