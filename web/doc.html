@@ -1,0 +1,150 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link href="calendar.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="site.html" class="navbar-brand">ISI</a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</diV>
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav">
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="site.html">Accueil</a></li>
+					<li><a href="actu.html">Actualites</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">A propos<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="cours.html">Cours</a></li>
+							<li><a href="ens.html">Enseignants</a></li>
+							<li><a href="emp.html">Emplois</a></li>
+							<li class="divider"></li>
+							<li><a href="form.html">Formations</a></li>
+							<li><a href="club.html">Clubs</a></li>
+							<li class="active"><a href="doc.html">FAQ</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<img src="cours.jpg" class="img-responsive">
+	</nav>
+	<div class="container col-md-8 col-sm-7">
+		<center><h2 class="well">FAQ</h2></center>
+		<form role="form">
+    		<div class="form-group">
+        		<input id="filterinput" class="form-control" type="search" placeholder="Search..." />
+    		</div>
+			 <div class="list-group" id="mylist">
+	  			<a class="list-group-item" data-toggle="modal" data-target="#myModal1"><h3><span>credits</h3></span></a>
+	  				<div class="modal fade" id="myModal1" role="dialog">
+		    			<div class="modal-dialog">
+			      			<div class="modal-content">
+			        			<div class="modal-header">
+			          				<h4 class="modal-title">Les credits</h4>
+			        			</div>
+			        			<div class="modal-body">
+			          				<center><p>Les credits sont importants car il sont inclus dans le calcul du score</p></center>
+			        			</div>
+			        			<div class="modal-footer">
+			          				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        			</div>
+			      			</div>
+		      			</div>
+	  				</div>
+	  			<a class="list-group-item"><h3><span>elimination</span></h3></a>
+	  			<a class="list-group-item"><h3><span>SFE </span></h3>
+	  				<p>Tarek est votre meilleur coach</p></a>
+			</div>
+		</form>
+	</div>
+	<div class="col-md-4 col-sm-5">
+		<center><h2 class="well">Actualite</h2></center>
+		<div id='carousel-custom' class='carousel slide ' data-ride='carousel'>
+    		<div class='carousel-outer' style="position: relative;">
+        		<div class='carousel-inner'>
+		            <div class='item active'>
+		                <img src='image1.jpg'/>
+		            </div>
+		            <div class='item'>
+		                <img src='image2.jpg'/>
+		            </div>
+		            <div class='item'>
+		                <img src='image3.jpg'/>
+		            </div>
+		                
+		            <div class='item'>
+		                <img src='image4.jpg'/>
+		            </div>
+		            <div class='item'>
+		                <img src='image1.jpg'/>
+		            </div>
+		            <div class='item'>
+		                <img src='image2.jpg'/>
+		            </div>
+		            
+		            <div class='item'>
+		                <img src='image3.jpg'/>
+		            </div>
+		            <div class='item'>
+		                <img src='image4.jpg'/>
+		            </div>
+        		</div>
+        		<a class='left carousel-control' href='#carousel-custom' data-slide='prev'></a>
+        		<a class='right carousel-control' href='#carousel-custom' data-slide='next'></a>
+    		</div>
+		</div>
+	</div>
+	<div class="container col-md-4 col-sm-4">
+		<center><h2 class="well">Calendar</h2></center>
+    	<div class="responsive-calendar">
+        	<div class="controls">
+            	<a class="pull-left" data-go="prev"><div class="btn btn-primary">Prev</div></a>
+            	<h4><span data-head-year></span> <span data-head-month></span></h4>
+            	<a class="pull-right" data-go="next"><div class="btn btn-primary">Next</div></a>
+        	</div><hr/>
+        	<div class="day-headers">
+	          <div class="day header">Mon</div>
+	          <div class="day header">Tue</div>
+	          <div class="day header">Wed</div>
+	          <div class="day header">Thu</div>
+	          <div class="day header">Fri</div>
+	          <div class="day header">Sat</div>
+	          <div class="day header">Sun</div>
+        	</div>
+        	<div class="days" data-group="days">
+        	</div>
+    	</div>
+    </div>
+	<script src="jquery-1.12.0.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script type="text/javascript" src="doc.js"></script>
+	<script>
+		$(window).load(function(){
+			$('#mylist').btsListFilter('#filterinput', { itemChild: 'span' });
+		});
+	</script>
+	<script src="calendar.js"></script>
+    <script type="text/javascript">
+      	$(document).ready(function () {
+	        $(".responsive-calendar").responsiveCalendar({
+	          time: '2016-06',
+	          events: {
+	            "2016-06-30": {"number": 5, "url": ""},
+	            "2016-06-26": {"number": 1, "url": ""}, 
+	            "2016-06-03":{"number": 1}, 
+	            "2016-06-12": {}}
+	        });
+      	});
+    </script>
+</body>
+</html>
